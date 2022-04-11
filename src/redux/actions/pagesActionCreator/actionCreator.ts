@@ -21,21 +21,21 @@ interface ISetPageNumber {
 export type TPageActionsTypes = IPageNumberPlus | IPageNumberMinus | ISetPageNumber
 
 export const pageNumberPlus = (): TPageActionsTypes => {
-    return{
+    return {
         type: PAGE_NUMBER_PLUS,
         payload: {}
     }
 }
 
 export const pageNumberMinus = (): TPageActionsTypes => {
-    return{
+    return {
         type: PAGE_NUMBER_MINUS,
         payload: {}
     }
 }
 
 export const setPageNumber = (numb: number): TPageActionsTypes => {
-    return{
+    return {
         type: SET_PAGE_NUMBER,
         payload: {
             numb

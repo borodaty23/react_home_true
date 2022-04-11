@@ -23,7 +23,7 @@ export const CounterWithReduxFunctional = () => {
    
         if (id === "plusBtn"){
             dispatchedChangeCountPlus()
-        }else{
+        } else {
             dispatchChangeCountMinus()
         }
       }

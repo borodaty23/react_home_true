@@ -12,13 +12,13 @@ interface IChangeCountMinusAction {
 export type TTaskActionTypes = IChangeCountPlusAction | IChangeCountMinusAction
 
 export const changeCountPlus = (): TTaskActionTypes => {
-    return{
+    return {
         type: CHANGE_COUNT_PLUS,
     }
 }
 
 export const changeCountMinus = (): TTaskActionTypes => {
-    return{
+    return {
         type: CHANGE_COUNT_MINUS,
     }
 }

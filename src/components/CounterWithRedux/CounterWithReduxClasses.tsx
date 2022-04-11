@@ -44,7 +44,7 @@ const mapStateToProps = (state: RootState) => {
 const mapDispatchToProps = (dispatch: AppDispatch) => {
   return {
       changeCountPlus: () => {
-          dispatch(changeCountPlus());
+        dispatch(changeCountPlus());
       },
       changeCountMinus: () => {
         dispatch(changeCountMinus());
