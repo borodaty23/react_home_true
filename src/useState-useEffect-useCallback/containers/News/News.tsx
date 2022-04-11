@@ -14,6 +14,8 @@ import { changeHitsPerPage } from '../../../redux/actions/hitsPerPageCreator/act
 import './News.css';
 import { HITS } from '../../components/common-components/Select/select-constants';
 import { PAGES } from "../../../redux/reducers/mock-data/mock-data"
+import { pageSelector } from '../../../redux/selectors/pageSelector/pageSelector';
+import { hitsPerPageSelector } from '../../../redux/selectors/hitsPerPageSelector/hitsPerPageSelector';
 
 interface IResult {
     hits: IPost[],
@@ -41,11 +43,9 @@ export interface IPost {
 const News = () => {
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [result, setResult] = useState(PAGES);
-    // const [hitsPerPage, setHitsPerPage] = useState<number>(20);
-    // const [page, setPage] = useState<number>(0);
-
-    const page = useSelector((state: RootState) => state.page);
-    const hitsPerPage = useSelector((state: RootState) => state.hitsPerPage);
+    
+    const page = useSelector(pageSelector);
+    const hitsPerPage = useSelector(hitsPerPageSelector);
 
     const dispatch = useDispatch();
     const dispatchedPageNumberPlus = useCallback(
@@ -121,13 +121,6 @@ const News = () => {
             }
         }
     }
-
-    console.log(page)
-    console.log(hitsPerPage)
-
-    // const updatePage = (number: INewsState['page']) => {
-    //     setPage(number);
-    // }
 
     return (
         <div className="wrapper">

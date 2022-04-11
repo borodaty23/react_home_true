@@ -7,9 +7,9 @@ const initialState = 0;
 export const countReducer = (state = initialState, { type }: TTaskActionTypes) => {
     switch (type){
         case CHANGE_COUNT_PLUS:
-            return ++state;
+            return state + 1;
         case  CHANGE_COUNT_MINUS:
-            return --state;   
+            return state - 1;   
         default: 
             return state
     }

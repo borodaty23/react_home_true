@@ -17,7 +17,7 @@ interface ICounterWithRedux {}
      
      if (id === "plusBtn"){
        changeCountPlus()
-     }else{
+     } else {
        changeCountMinus()
      }
    }
@@ -43,7 +43,7 @@ const mapStateToProps = (state: RootState) => {
 
 const mapDispatchToProps = (dispatch: AppDispatch) => {
   return {
-    changeCountPlus: () => {
+      changeCountPlus: () => {
           dispatch(changeCountPlus());
       },
       changeCountMinus: () => {

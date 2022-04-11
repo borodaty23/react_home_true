@@ -9,9 +9,9 @@ function App() {
   return (
   <>
     <Provider store={store}>
-      <CounterWithReduxClasses></CounterWithReduxClasses>
-      <CounterWithReduxFunctional></CounterWithReduxFunctional>
-      {/* <NewsPage></NewsPage> */}
+      <CounterWithReduxClasses/>
+      <CounterWithReduxFunctional/>
+      {/* <NewsPage/> */}
     </Provider>
   </>
   );

@@ -1,7 +1,6 @@
 import { createStore, compose } from 'redux';
 import rootReducer from '../reducers';
 
-
 const composeEnhancers = // для подключения redux dev tools если приложение находится в dev mode и на стороне клиента
     process.env.NODE_ENV !== 'production' &&
     typeof window === 'object' &&

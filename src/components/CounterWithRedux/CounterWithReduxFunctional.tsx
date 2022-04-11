@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { BUTTONS } from "./mock-data/CounterWithRedux"
 import { RootState } from '../../redux/reducers';
 import { changeCountPlus, changeCountMinus } from "../../redux/actions/countActionCreater/actionCreater"
-
+import { countSelector } from '../../redux/selectors/countSelector/countSelector';
 
 export const CounterWithReduxFunctional = () => {
-    const count = useSelector((state: RootState) => state.count)
+    const count = useSelector(countSelector)
 
     const dispatch = useDispatch();
     const dispatchedChangeCountPlus = useCallback(
