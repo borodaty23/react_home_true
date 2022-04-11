@@ -5,7 +5,6 @@ import CounterWithReduxClasses from "./components/CounterWithRedux/CounterWithRe
 import { CounterWithReduxFunctional } from "./components/CounterWithRedux/CounterWithReduxFunctional"; 
 import NewsPage from "./useState-useEffect-useCallback/pages/NewsPage";
 
-
 function App() {
   return (
   <>

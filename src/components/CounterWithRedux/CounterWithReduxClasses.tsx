@@ -14,7 +14,7 @@ interface ICounterWithRedux {}
      const { target } = e
      const { id } = target as HTMLButtonElement
      const { changeCountPlus, changeCountMinus } = this.props;
-
+     
      if (id === "plusBtn"){
        changeCountPlus()
      }else{

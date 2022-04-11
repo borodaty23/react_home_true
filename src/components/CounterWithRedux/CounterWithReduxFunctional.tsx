@@ -6,7 +6,6 @@ import { changeCountPlus, changeCountMinus } from "../../redux/actions/countActi
 
 
 export const CounterWithReduxFunctional = () => {
-
     const count = useSelector((state: RootState) => state.count)
 
     const dispatch = useDispatch();
@@ -18,7 +17,6 @@ export const CounterWithReduxFunctional = () => {
         () => dispatch(changeCountMinus()),
         [dispatch]
     );
-
     const buttonHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         const { target } = e
         const { id } = target as HTMLButtonElement
