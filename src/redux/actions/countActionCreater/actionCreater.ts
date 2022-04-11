@@ -3,7 +3,6 @@ import { CHANGE_COUNT_MINUS } from "../action";
 
 interface IChangeCountPlusAction {
     type: typeof CHANGE_COUNT_PLUS
-    
 }
 
 interface IChangeCountMinusAction {

@@ -14,9 +14,8 @@ interface ICounterWithRedux {
    buttonHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
      const { target } = e
      const { id } = target as HTMLButtonElement
-
      const { changeCountPlus, changeCountMinus } = this.props;
-
+     
      if (id === "plusBtn"){
        changeCountPlus()
      }else{
@@ -28,11 +27,11 @@ interface ICounterWithRedux {
     const { count, changeCountPlus, changeCountMinus } = this.props;
 
     return (
-        <>
-      <p>{count}</p>
-      {
-        BUTTONS.map(({id, textArea}) => <button key = {id} id = {id} onClick= {this.buttonHandler} > {textArea} </button>)
-      }
+      <>
+        <p>{count}</p>
+        {
+          BUTTONS.map(({id, textArea}) => <button key = {id} id = {id} onClick= {this.buttonHandler} > {textArea} </button>)
+        }
       </>
     )
   }

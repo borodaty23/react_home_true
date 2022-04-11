@@ -48,22 +48,18 @@ const News = () => {
     const hitsPerPage = useSelector((state: RootState) => state.hitsPerPage);
 
     const dispatch = useDispatch();
-
     const dispatchedPageNumberPlus = useCallback(
         () => dispatch(pageNumberPlus()),
         [dispatch]
     );
-
     const dispatchedPageNumberMinus = useCallback(
         () => dispatch(pageNumberMinus()),
         [dispatch]
     );
-
     const dispatchedSetPageNumber = useCallback(
         (numb: number) => dispatch(setPageNumber(numb)),
         [dispatch]
     );
-
     const dispatchedChangeHitsPerPage = useCallback(
         (value: number) => dispatch(changeHitsPerPage(value)),
         [dispatch]

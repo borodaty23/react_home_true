@@ -8,9 +8,7 @@ interface IPageNumberPlus {
 
 interface IPageNumberMinus {
     type: typeof PAGE_NUMBER_MINUS
-    payload: {
-        
-    }
+    payload: {}
 }
 
 interface ISetPageNumber {
