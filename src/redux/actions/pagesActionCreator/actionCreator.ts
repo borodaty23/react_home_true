@@ -8,9 +8,7 @@ interface IPageNumberPlus {
 
 interface IPageNumberMinus {
     type: typeof PAGE_NUMBER_MINUS
-    payload: {
-        
-    }
+    payload: {}
 }
 
 interface ISetPageNumber {
@@ -22,21 +20,21 @@ interface ISetPageNumber {
 
 export type TPageActionsTypes = IPageNumberPlus | IPageNumberMinus | ISetPageNumber
 
-export const pageNumberPlus = (): TPageActionsTypes =>{
+export const pageNumberPlus = (): TPageActionsTypes => {
     return{
         type: PAGE_NUMBER_PLUS,
         payload: {}
     }
 }
 
-export const pageNumberMinus = (): TPageActionsTypes =>{
+export const pageNumberMinus = (): TPageActionsTypes => {
     return{
         type: PAGE_NUMBER_MINUS,
         payload: {}
     }
 }
 
-export const setPageNumber = (numb: number): TPageActionsTypes =>{
+export const setPageNumber = (numb: number): TPageActionsTypes => {
     return{
         type: SET_PAGE_NUMBER,
         payload: {

@@ -9,7 +9,7 @@ interface IChangeHitsPerPage {
 
 export type TChangeHitsPerPage = IChangeHitsPerPage
 
-export const changeHitsPerPage = (value: number):TChangeHitsPerPage => {
+export const changeHitsPerPage = (value: number): TChangeHitsPerPage => {
     return {
         type: CHANGE_HITS_PER_PAGE,
         payload:{

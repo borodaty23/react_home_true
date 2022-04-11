@@ -10,12 +10,10 @@ export const CounterWithReduxFunctional = () => {
     const count = useSelector((state: RootState) => state.count)
 
     const dispatch = useDispatch();
-
     const dispatchedChangeCountPlus = useCallback(
         () => dispatch(changeCountPlus()),
         [dispatch]
     );
-
     const dispatchChangeCountMinus = useCallback(
         () => dispatch(changeCountMinus()),
         [dispatch]
@@ -34,10 +32,10 @@ export const CounterWithReduxFunctional = () => {
 
   return (
     <>
-    <p>{count}</p>
-    {
-      BUTTONS.map(({id, textArea}) => <button key = {id} id = {id} onClick= {buttonHandler} > {textArea} </button>)
-    }
+      <p>{count}</p>
+      {
+        BUTTONS.map(({id, textArea})=><button key={id} id={id} onClick={buttonHandler}>{textArea}</button>)
+      }
     </>
   )
 }

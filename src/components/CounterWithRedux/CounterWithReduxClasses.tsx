@@ -7,14 +7,12 @@ import { BUTTONS } from "./mock-data/CounterWithRedux"
 
 interface IPropsCounterWithRedux extends PropsFromRedux {}
 
-interface ICounterWithRedux {
-}
+interface ICounterWithRedux {}
 
  class CounterWithRedux extends Component<IPropsCounterWithRedux, ICounterWithRedux> {
    buttonHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
      const { target } = e
      const { id } = target as HTMLButtonElement
-
      const { changeCountPlus, changeCountMinus } = this.props;
 
      if (id === "plusBtn"){
@@ -25,14 +23,14 @@ interface ICounterWithRedux {
    }
 
   render() {
-    const { count, changeCountPlus, changeCountMinus } = this.props;
+    const { count } = this.props;
 
     return (
-        <>
-      <p>{count}</p>
-      {
-        BUTTONS.map(({id, textArea}) => <button key = {id} id = {id} onClick= {this.buttonHandler} > {textArea} </button>)
-      }
+      <>
+        <p>{count}</p>
+        {
+          BUTTONS.map(({id, textArea})=><button key={id} id={id} onClick={this.buttonHandler}>{textArea} </button>)
+        }
       </>
     )
   }

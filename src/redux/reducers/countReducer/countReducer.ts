@@ -4,7 +4,7 @@ import { TTaskActionTypes } from "../../actions/countActionCreater/actionCreater
 
 const initialState = 0;
 
-export const countReducer = (state = initialState, { type }:TTaskActionTypes) => {
+export const countReducer = (state = initialState, { type }: TTaskActionTypes) => {
     switch (type){
         case CHANGE_COUNT_PLUS:
             return ++state;
