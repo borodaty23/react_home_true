@@ -1,4 +1,4 @@
-import { GET_POSTS_Failed, GET_POSTS_Started, GET_POSTS_Success } from "../../actions/actions";
+import { GET_POSTS_FAILED, GET_POSTS_STARTED, GET_POSTS_SUCCESS } from "../../actions/actions";
 import { TPostsActions, IPosts } from "../../actions/addPostsActionCreator/addPostsActionCreator";
 
 const initialState = {
@@ -15,15 +15,15 @@ export interface IInitialState {
 
 export const postsReducer = (state = initialState, {type, payload}: TPostsActions): IInitialState => {
     switch (type) {
-        case GET_POSTS_Started:
+        case GET_POSTS_STARTED:
             return {
                 ...state, isLoading: true,
             };
-        case GET_POSTS_Success:
+        case GET_POSTS_SUCCESS:
             return {
                 ...state, isLoading: false, posts: [...payload]
             };
-        case GET_POSTS_Failed: 
+        case GET_POSTS_FAILED:
             return {
                 ...state, error: payload.error, isLoading: false,
             }

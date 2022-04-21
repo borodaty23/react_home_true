@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Title = () => {
+interface ITitleProps {
+  children: string
+}
+
+export const Title = ({ children }: ITitleProps) => {
   return (
-    <h3>Title</h3>
+    <h3>{children}</h3>
   )
 }

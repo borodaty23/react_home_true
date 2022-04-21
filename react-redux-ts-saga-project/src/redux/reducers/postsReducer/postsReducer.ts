@@ -21,11 +21,11 @@ const postsReducer = (state = initialState, { payload, type }: TPostsActions): I
             };
         case GET_POSTS_SUCCESS:
             return {
-                ...state, posts: payload, isLoading: false, error: null
+                ...state, posts: payload as IPosts[], isLoading: false, error: null
             };
         case GET_POSTS_FAILED:
             return {
-                ...state, isLoading: false, error: payload.error
+                ...state, isLoading: false, error: (payload as {error: IError}).error
             };
         default:
             return state;

@@ -1,4 +1,4 @@
-import { GET_POSTS_Failed, GET_POSTS_Started, GET_POSTS_Success } from "../actions";
+import {GET_POSTS_FAILED, GET_POSTS_STARTED, GET_POSTS_SUCCESS } from "../actions";
 import { Dispatch } from "redux";
 import axios from "axios";
 
@@ -12,30 +12,30 @@ export interface IPosts {
 export type TPostsActions = IGetPostsSuccess | IGetPostsFailed | IGetPostsStarted
 
 export interface IGetPostsSuccess {
-    type: typeof GET_POSTS_Success
+    type: typeof GET_POSTS_SUCCESS
     payload: IPosts[]
 }
 
 export interface IGetPostsFailed {
-    type: typeof GET_POSTS_Failed
+    type: typeof GET_POSTS_FAILED
     payload: {
         error: string
     }
 }
 
 export interface IGetPostsStarted {
-    type: typeof GET_POSTS_Started
+    type: typeof GET_POSTS_STARTED
     payload: {}
 }
 
 export const getPostsStarted = (): IGetPostsStarted => ({
-    type: GET_POSTS_Started,
+    type: GET_POSTS_STARTED,
     payload: {}
 });
 
 export const getPostsSuccess = (posts: IPosts[]): IGetPostsSuccess  => {
     return {
-        type: GET_POSTS_Success,
+        type: GET_POSTS_SUCCESS,
         payload: [
             ...posts
         ]
@@ -44,7 +44,7 @@ export const getPostsSuccess = (posts: IPosts[]): IGetPostsSuccess  => {
 
 export const getPostsFailed = (): IGetPostsFailed => {
     return {
-        type: GET_POSTS_Failed,
+        type: GET_POSTS_FAILED,
         payload: {
             error: "GG WP"
         }

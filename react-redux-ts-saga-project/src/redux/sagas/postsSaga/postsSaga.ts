@@ -18,9 +18,9 @@ function* fetchPostsSaga() {
                 getPostsFailed(response.error)
             );
         }
-    } catch (e: any) {  // шо он хочет в типизации ???????????????????????
+    } catch (e) {
         yield put(
-            getPostsFailed(e)
+            getPostsFailed(e as IError)
         );
     }
 }

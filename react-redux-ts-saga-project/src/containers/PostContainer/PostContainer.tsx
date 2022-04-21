@@ -1,19 +1,17 @@
 import React from 'react'
-
 import { Paragraph } from '../../components/common-components/Paragraph/Paragraph'
 import { Title } from '../../components/common-components/Title/Title'
-import { IPosts } from '../../redux/actions/addPostsActionCreator/addPostsActionCreator'
 
-interface IPostContainer {
+export interface IPostContainerProps {
   title: string
   body: string
 }
 
-export const PostContainer = ({ title, body }: IPostContainer) => {
+export const PostContainer = ({ title, body }: IPostContainerProps) => {
   return (
     <>
-      <Paragraph></Paragraph>
-      <Title></Title>
+        <Title>{title}</Title>
+        <Paragraph>{body}</Paragraph>
     </>
   )
 }

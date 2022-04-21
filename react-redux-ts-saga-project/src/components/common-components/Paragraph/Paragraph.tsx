@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Paragraph = () => {
+interface IParagraphProps {
+  children: string
+}
+
+export const Paragraph = ({ children }: IParagraphProps) => {
   return (
-    <p>Paragraph</p>
+    <p>{ children }</p>
   )
 }

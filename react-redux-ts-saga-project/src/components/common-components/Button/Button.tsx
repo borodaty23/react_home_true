@@ -1,10 +1,10 @@
 import React from 'react'
 
-interface IButton {
+interface IButtonProps {
   onClick: () => void
 }
 
-export const Button = ({ onClick }: IButton) => {
+export const Button = ({ onClick }: IButtonProps) => {
   return (
     <button onClick={onClick}>Click Me</button>
   )
