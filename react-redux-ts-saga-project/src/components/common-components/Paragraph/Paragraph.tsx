@@ -6,6 +6,6 @@ interface IParagraphProps {
 
 export const Paragraph = ({ children }: IParagraphProps) => {
   return (
-    <p>{children}</p>
+    <p>{ children }</p>
   )
 }

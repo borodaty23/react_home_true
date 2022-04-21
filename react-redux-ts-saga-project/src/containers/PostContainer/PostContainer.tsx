@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Paragraph } from '../../components/common-components/Paragraph/Paragraph'
 import { Title } from '../../components/common-components/Title/Title'
 
